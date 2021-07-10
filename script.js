@@ -38,12 +38,13 @@
            let removeLastValue = inputResult.slice(0, inputResult.length -1);
            document.getElementById('input-pin').value = removeLastValue;
         }
-
+  
         function submitBtn() {
             var randomNum = document.getElementById('genaret-num').value;
-            typeNum = document.getElementById('input-pin').value;
+           
+            let typeNum = document.getElementById('input-pin').value;
             
-            if (randomNum == typeNum) {
+            if (randomNum === typeNum) {
                 displayBlock('matched')
             }
 
@@ -51,3 +52,5 @@
                 displayBlock('unmatched')
             };
         }
+     submitBtn();
+        
